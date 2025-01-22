@@ -4,7 +4,7 @@ interface navProps {
   updateState: () => void;
 }
 
-export default function Nav({ updateState }:navProps) {
+export default function Nav({ updateState }: navProps) {
   const [currentURL, setCurrentURL] = useState("Home");
   const updateLocation = (section: string) => {
     setCurrentURL(section);
@@ -12,7 +12,7 @@ export default function Nav({ updateState }:navProps) {
 
   //taiwlind css classNames
   const linkClass =
-    "block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:p-0";
+    "block py-2 pr-4 pl-3 dark:text-white rounded bg-primary-700 text-gray-950 lg:bg-transparent lg:p-0";
   const activLinkClass =
     "block py-2 pr-4 pl-3 text-pink-500 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0";
 

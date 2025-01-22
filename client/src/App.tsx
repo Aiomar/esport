@@ -9,11 +9,19 @@ import Cs from "./components/sections/Cs";
 import Teams from "./components/sections/Teams";
 import Nav from "./components/Nav";
 import { useState } from "react";
+import Form from "./components/Form";
 
 export default function App() {
+  //* small screen nav
   const [open, setOpen] = useState(false);
   const updateState = () => {
     setOpen(!open);
+  };
+
+  //* buying merch form showing
+  const [show, setShow] = useState(false);
+  const updateShow = () => {
+    setShow(!show);
   };
 
   return (
@@ -24,7 +32,7 @@ export default function App() {
           className="flex fixed overflow-hidden z-40 items-center justify-center w-full h-screen right-0 left-0 bg-white
          dark:bg-gray-950"
         >
-          <Nav updateState={updateState}/>
+          <Nav updateState={updateState} />
         </aside>
       )}
       <Home />
@@ -33,7 +41,8 @@ export default function App() {
       <Lol />
       <Valo />
       <Cs />
-      <Market />
+      <Market updateShow={updateShow} />
+      {show && <Form updateShow={updateShow} />}
       <Footer />
     </div>
   );
