@@ -2,10 +2,7 @@ import About from "./components/sections/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/sections/Home";
-import Lol from "./components/sections/Lol";
 import Market from "./components/sections/Market";
-import Valo from "./components/sections/Valo";
-import Cs from "./components/sections/Cs";
 import Teams from "./components/sections/Teams";
 import Nav from "./components/Nav";
 import { useState } from "react";
@@ -25,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col justifiy-center items-center w-full h-auto md:h-screen overflow-x-hidden">
+    <div className="flex flex-col justfiy-center items-center w-full h-auto md:h-screen overflow-x-hidden md:overflow-x-visible">
       <Header updateState={updateState} open={open} />
       {open && (
         <aside
@@ -38,9 +35,6 @@ export default function App() {
       <Home />
       <About />
       <Teams />
-      <Lol />
-      <Valo />
-      <Cs />
       <Market updateShow={updateShow} />
       {show && <Form updateShow={updateShow} />}
       <Footer />

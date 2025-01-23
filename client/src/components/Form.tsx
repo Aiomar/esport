@@ -7,7 +7,7 @@ interface formProps {
 export default function Form({ updateShow }: formProps) {
   return (
     <div className="flex flex-col fixed z-40  justify-center items-center w-full h-screen backdrop-blur-xl">
-      <form className="max-w-md mx-auto">
+      <form className="max-w-md mx-auto scale-95 md:scale-100">
         <button
           className=""
           type="button"
@@ -15,7 +15,7 @@ export default function Form({ updateShow }: formProps) {
             updateShow();
           }}
         >
-          <IoMdClose color="white" size={30} className="rounded-3xl hover:bg-red-500"/>
+          <IoMdClose title="close" size={30} className="rounded-3xl text-red-500"/>
         </button>
         <div className="mb-5 w-96">
           <label

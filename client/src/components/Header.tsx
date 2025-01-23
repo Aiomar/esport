@@ -28,7 +28,7 @@ export default function Header({ updateState, open }: headerProps) {
         </button>
       </div>
       <a href="" className="flex flex-start items-center ml-5 md:ml-0 md:mr-5">
-        <img src="logo.svg" className="md:mr-3 h-10 md:h-9" alt="" />
+        <img src="logo.svg" className="md:mr-3 h-10 md:h-9" alt="" title="PINK DRAGONS"/>
       </a>
       <div className="hidden md:flex border-gray-200 px-4 lg:px-6 py-2.5">
         <Nav updateState={() => {}} />

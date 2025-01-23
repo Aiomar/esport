@@ -26,25 +26,19 @@ export default function Market({ updateShow }: marketProps) {
           <div className="md:grid md:grid-cols-3 h-fit">
             <Product
               title={"PRODUCT ESPORT"}
-              image={
-                "https://g2esports.com/cdn/shop/files/476.jpg?v=1724335089&width=360"
-              }
+              image={"/tshirt.png"}
               price={"90 TND"}
               updateShow={updateShow}
             />
             <Product
               title={"PRODUCT ESPORT"}
-              image={
-                "https://g2esports.com/cdn/shop/files/476.jpg?v=1724335089&width=360"
-              }
+              image={"/tshirt.png"}
               price={"90 TND"}
               updateShow={updateShow}
             />{" "}
             <Product
               title={"PRODUCT ESPORT"}
-              image={
-                "https://g2esports.com/cdn/shop/files/476.jpg?v=1724335089&width=360"
-              }
+              image={"/tshirt.png"}
               price={"90 TND"}
               updateShow={updateShow}
             />
