@@ -8,7 +8,7 @@ interface Product {
 
 export default function ProductDetails({title, image, price}:Product) {
   return(
-    <section className="flex flex-col md:flex-row justify-center dark:bg-gray-950 w-full h-screen
+    <section className="flex flex-col md:flex-row justify-center bg-white dark:bg-gray-950 w-full h-screen
       pt-28 fixed z-40 top-0 bottom-0 right-0 left-0"
       >
       <div className="mt-5">

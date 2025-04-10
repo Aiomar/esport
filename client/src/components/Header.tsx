@@ -12,7 +12,7 @@ export default function Header({ updateState, open }: headerProps) {
   return (
     <header
       className="flex flex-row md:justify-center md:items-center fixed z-50 w-full h-20 p-4 md:h-20 
-    bg-gray-100 dark:bg-gray-950"
+    bg-white dark:bg-gray-950"
     >
       <div className="flex items-center md:hidden">
         <button
