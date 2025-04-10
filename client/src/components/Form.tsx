@@ -1,35 +1,19 @@
-import { IoMdClose } from "react-icons/io";
-
-interface formProps {
-  updateShow: () => void;
-}
-
-export default function Form({ updateShow }: formProps) {
+export default function Form() {
   return (
-    <div className="flex flex-col fixed z-40  justify-center items-center w-full h-screen backdrop-blur-xl">
-      <form className="max-w-md mx-auto scale-95 md:scale-100">
-        <button
-          className=""
-          type="button"
-          onClick={() => {
-            updateShow();
-          }}
-        >
-          <IoMdClose title="close" size={30} className="rounded-3xl text-red-500"/>
-        </button>
+    <form className="flex flex-col scale-95 md:scale-100 items-center p-5">
         <div className="mb-5 w-96">
           <label
             htmlFor="fullName"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
           >
-            Full name
+           Full Name
           </label>
           <input
             type="text"
             name="fullName"
             id="fullName"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
-            focus:ring focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            focus:ring focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-96"
             placeholder="foulen"
             required
           />
@@ -39,14 +23,14 @@ export default function Form({ updateShow }: formProps) {
             htmlFor="email"
             className="block mb-2 text-sm font-medium text-gray-900  dark:text-white"
           >
-            Your email
+            Email
           </label>
           <input
             type="email"
             name="email"
             id="email"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
-            focus:ring focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            focus:ring focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-96"
             placeholder="name@gmail.com"
             required
           />
@@ -54,17 +38,17 @@ export default function Form({ updateShow }: formProps) {
 
         <div className="mb-5">
           <label
-            htmlFor="fullName"
+            htmlFor="phone"
             className="block mb-2 text-sm font-medium text-gray-900  dark:text-white"
           >
-            phone number
+            Phone Number
           </label>
           <input
-            type="number"
-            name="fullName"
-            id="fullName"
+            type="text"
+            name="phone"
+            id="phone"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
-            focus:ring focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            focus:ring focus:ring-blue-500 focus:border-blue-500 block  p-2.5 w-96"
             placeholder="+216"
             required
           />
@@ -78,21 +62,37 @@ export default function Form({ updateShow }: formProps) {
           </label>
           <input
             type="text"
-            name="fullName"
-            id="fullName"
+            name="adress"
+            id="adress"
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
-            focus:ring focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-            placeholder="Rue Tunis 3140"
+            focus:ring focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 "
+            placeholder="6 Rue Tunis Centre Ville 3140"
             required
+          />
+        </div>
+        <div className="mb-5">
+          <label
+            htmlFor="details"
+            className="block mb-2 text-sm font-medium text-gray-900  dark:text-white"
+          >
+            Details (optional)
+          </label>
+          <textarea
+            name="details"
+            id="details"
+            className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+            focus:ring focus:ring-blue-500 focus:border-blue-500 block w-96 h-20 p-2.5 "
+            placeholder=""
           />
         </div>
         <button
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white bg-green-700 hover:bg-green-600 focus:ring-4 focus:outline-none
+          focus:ring-green-400 font-medium rounded-lg text-sm  px-5 py-2.5 text-
+          dark:bg-green-700 dark:hover:bg-green-600  w-96"
         >
-          Submit
+          Submit to Buy 
         </button>
       </form>
-    </div>
   );
 }

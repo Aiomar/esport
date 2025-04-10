@@ -1,16 +1,27 @@
+import { useState } from "react";
+import ProductDetails from "./ProductDetails";
+
 interface productProps {
   title: string;
   image: string;
   price: string;
-  updateShow: () => void;
 }
 
 export default function Product({
   title,
   image,
   price,
-  updateShow,
 }: productProps) {
+  // product details 
+  const [showProductDetails, setShowProductDetails] = useState<boolean>(false);
+  const updateShow = () => {
+    setShowProductDetails(!showProductDetails);
+  };
+
+  if (showProductDetails) {
+    return <ProductDetails title={title} image={image} price={price}/>
+  }
+  
   return (
     <div
       className="flex flex-col items-center scale-95 md:scale-100 h-80 p-2 rounded-xl md:mb-16  
@@ -19,7 +30,7 @@ export default function Product({
         updateShow();
       }}
     >
-      <img src={image} alt="" className="w-44 rounded-lg" />
+      <img src={image} alt="" className="w-44 rounded-lg"/>
       <p className="text-2xl font-semibold text-gray-950 dark:text-white mt-5">
         {title}
       </p>

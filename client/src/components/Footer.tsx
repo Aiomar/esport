@@ -1,7 +1,7 @@
 import { FaRegCopyright,  } from "react-icons/fa6";
 export default function Footer() {
   return (
-  <footer className="bg-white  shadow-sm dark:bg-gray-950 w-full">
+  <footer className="bg-white shadow-sm dark:bg-gray-950 w-full">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="flex items-center text-sm text-gray-500 sm:text-center dark:text-gray-400">
           <FaRegCopyright className="mr-1" />

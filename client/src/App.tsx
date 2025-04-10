@@ -6,21 +6,13 @@ import Market from "./components/sections/Market";
 import Teams from "./components/sections/Teams";
 import Nav from "./components/Nav";
 import { useState } from "react";
-import Form from "./components/Form";
 
 export default function App() {
-  //* small screen nav
+  // mobile navigation 
   const [open, setOpen] = useState(false);
   const updateState = () => {
     setOpen(!open);
   };
-
-  //* buying merch form showing
-  const [show, setShow] = useState(false);
-  const updateShow = () => {
-    setShow(!show);
-  };
-
   return (
     <div className="flex flex-col justfiy-center items-center w-full h-auto md:h-screen overflow-x-hidden md:overflow-x-visible">
       <Header updateState={updateState} open={open} />
@@ -35,8 +27,7 @@ export default function App() {
       <Home />
       <About />
       <Teams />
-      <Market updateShow={updateShow} />
-      {show && <Form updateShow={updateShow} />}
+      <Market />
       <Footer />
     </div>
   );
