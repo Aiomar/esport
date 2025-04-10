@@ -1,6 +1,8 @@
 import Product from "../Product";
 import { useRef } from "react";
 import { motion } from "motion/react";
+import { IoCartOutline } from "react-icons/io5";
+
 interface marketProps {
   updateShow: () => void;
 }
@@ -19,29 +21,18 @@ export default function Market({ updateShow }: marketProps) {
         whileInView={{ opacity: 1 }}
         viewport={{ root: scrollRef }}
       >
-        <h1 className="text-4xl font-russo mt-32 md:mt-36 text-center dark:text-white">
-          MARKET PLACE
+        <h1 className="flex items-center text-4xl font-russo mt-32 md:mt-36  dark:text-white">
+        <IoCartOutline/> MARKET PLACE
         </h1>
         <div className="flex flex-col md:flex-row mt-10 h-fit">
           <div className="md:grid md:grid-cols-3 h-fit">
             <Product
               title={"PRODUCT ESPORT"}
-              image={"/tshirt.png"}
-              price={"90 TND"}
-              updateShow={updateShow}
-            />
-            <Product
-              title={"PRODUCT ESPORT"}
-              image={"/tshirt.png"}
+              image={"https://thebanyantee.com/cdn/shop/files/Black-T-shirt.jpg?v=1721380366"}
+
               price={"90 TND"}
               updateShow={updateShow}
             />{" "}
-            <Product
-              title={"PRODUCT ESPORT"}
-              image={"/tshirt.png"}
-              price={"90 TND"}
-              updateShow={updateShow}
-            />
           </div>
         </div>
       </motion.div>

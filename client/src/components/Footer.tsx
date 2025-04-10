@@ -1,57 +1,29 @@
-import { GiTunisia } from "react-icons/gi";
-import { FaRegCopyright, FaYoutube } from "react-icons/fa6";
-import { SiMaildotru } from "react-icons/si";
-import { IoLocationOutline } from "react-icons/io5";
-import {
-  FaFacebook,
-  FaTwitch,
-  FaDiscord,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaRegCopyright,  } from "react-icons/fa6";
 export default function Footer() {
   return (
-    <footer
-      id="Contact"
-      className="flex sm:flex-col md:flex-row items-center w-full h-80 md:h-auto bg-gray-100 dark:bg-gray-950 md:pt-1 p-10 md:p-0"
-    >
-      <div className="flex flex-col md:flex-row md:float-start mt-2 md:ml-10 w-60 h-64">
-        <div className="flex flex-col">
-          <img src="logo.svg" className=" w-20 mr-10  " alt="" />
-          <span className="dark:text-gray-300 mt-2 flex flex-row items-center">
-            <IoLocationOutline size={20} />
-            Address : Kairouan - Tunisia <GiTunisia />
-          </span>
-          <span className="dark:text-gray-300 mt-2 flex flex-row items-center">
-            <SiMaildotru className="mr-2" />
-            Email : team@email.com
-          </span>
-          <span className="dark:text-gray-300 mt-2 flex flex-row items-center">
-            <FaWhatsapp className="mr-2" /> Whats App : +216 23 456 878
-          </span>
-          <span className="dark:text-gray-300 mt-2 flex flex-row items-center w-96 font-mono text-sm ">
-            <FaRegCopyright className="mr-1" /> <p className="mr-2">2025 </p>
-            PINK DRAGONS , All rights reserved
-          </span>
-        </div>
-        <div className="flex flex-row  mt-10 justify-center items-center space-x-6 ml-16 md:ml-56">
-          <a href="">
-            <FaFacebook size={30} className="text-gray-950 dark:text-white" />
-          </a>
-          <a href="" className="ml-2">
-            <FaInstagram size={30} className="text-gray-950 dark:text-white" />
-          </a>
-          <a href="" className="ml-2">
-            <FaYoutube size={30} className="text-gray-950 dark:text-white" />
-          </a>
-          <a href="" className="ml-2">
-            <FaTwitch size={30} className="text-gray-950 dark:text-white" />
-          </a>
-          <a href="" className="ml-2">
-            <FaDiscord size={30} className="text-gray-950 dark:text-white" />
-          </a>
-        </div>
+  <footer className="bg-white  shadow-sm dark:bg-gray-950 w-full">
+      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span className="flex items-center text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <FaRegCopyright className="mr-1" />
+          {Date().toString().substring(10,Date().toString().length-29)}
+          <a href="https://aidiomar.vercel.app/" className="hover:underline ml-1 mr-1">Developed By Omar Aidi</a>  
+          .All Rights Reserved
+      </span>
+      <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0 ml-1">
+          <li>
+              <a href="#" className="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+              <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+          </li>
+          <li>
+              <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
+          </li>
+          <li>
+              <a href="#" className="hover:underline">Contact</a>
+          </li>
+      </ul>
       </div>
-    </footer>
+  </footer>
   );
 }
